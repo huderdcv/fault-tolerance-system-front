@@ -1,18 +1,19 @@
 export const AddUser = () => {
   return (
-    <div class="home-content__subscribe">
-      <form id="mc-form" class="group" novalidate="true">
+    <div className="home-content__subscribe">
+      <form id="mc-form" className="group" noValidate={true}>
         <input
           type="email"
           value=""
           name="usuario"
-          class="usuario"
+          className="usuario"
           id="mc-email"
           placeholder="Nombre de usuario"
           required=""
+          readOnly
         />
         <input type="submit" name="subscribe" value="Agregar" />
-        <label for="mc-email" class="subscribe-message"></label>
+        <label htmlFor="mc-email" className="subscribe-message"></label>
       </form>
     </div>
   );

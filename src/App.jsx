@@ -8,12 +8,12 @@ function App() {
     <>
       {/* <!-- home
     ================================================== --> */}
-      <main class="s-home s-home--particles">
-        <div id="particles-js" class="home-particles"></div>
+      <main className="s-home s-home--particles">
+        <div id="particles-js" className="home-particles"></div>
 
-        <div class="gradient-overlay"></div>
+        <div className="gradient-overlay"></div>
 
-        <div class="home-content">
+        <div className="home-content">
           <Header />
 
           <HomeContentMain />
@@ -22,7 +22,7 @@ function App() {
 
           <Footer />
 
-          <div class="home-content__line"></div>
+          <div className="home-content__line"></div>
         </div>
         {/* <!-- end home-content --> */}
       </main>
@@ -30,8 +30,8 @@ function App() {
 
       {/* <!-- info */}
       {/* ================================================== --> */}
-      <a class="info-toggle" href="#0">
-        <span class="info-menu-icon"></span>
+      <a className="info-toggle" href="#0">
+        <span className="info-menu-icon"></span>
       </a>
 
       {/* <!-- end s-info --> */}
@@ -40,7 +40,7 @@ function App() {
       {/* ================================================== --> */}
       <div id="preloader">
         <div id="loader">
-          <div class="line-scale-pulse-out">
+          <div className="line-scale-pulse-out">
             <div></div>
             <div></div>
             <div></div>

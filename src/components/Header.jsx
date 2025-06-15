@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Header = () => {
   return (
-    <div class="home-logo">
+    <div className="home-logo">
       <a href="index-particles.html">
         <img src="images/logo.svg" alt="Homepage" />
       </a>

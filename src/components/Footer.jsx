@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <div class="row home-copyright">
+    <div className="row home-copyright">
       <span>Copyright Count 2025</span>
       <span>
         Design by
