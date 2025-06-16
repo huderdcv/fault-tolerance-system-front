@@ -1,10 +1,9 @@
 import React from 'react';
 
-export const UserList = () => {
+export const UserList = ({ data }) => {
+  console.log(data);
   return (
     <>
-      <h1>Lista de usuarios</h1>
-
       <table>
         <thead>
           <tr>
@@ -15,13 +14,16 @@ export const UserList = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>13534FF3</td>
-            <td>Luis Sanchez</td>
-            <td>luis.sanchez@gmail.com</td>
-          </tr>
-          <tr>
+          {data.map(({ id, text, completedAt }, i) => (
+            <tr key={id}>
+              <td>{i + 1}</td>
+              <td>{id}</td>
+              <td>{text}</td>
+              <td>{completedAt}</td>
+            </tr>
+          ))}
+
+          {/* <tr>
             <td>2</td>
             <td>3R4EWR34</td>
             <td>Carmen Huamán</td>
@@ -32,7 +34,7 @@ export const UserList = () => {
             <td>34RE4TRED4</td>
             <td>Pedro Ramirez</td>
             <td>pedro.r@gmail.com</td>
-          </tr>
+          </tr> */}
         </tbody>
       </table>
     </>
