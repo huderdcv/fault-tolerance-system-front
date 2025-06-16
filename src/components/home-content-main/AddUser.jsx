@@ -1,7 +1,15 @@
 export const AddUser = () => {
+  const onFormSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <div className="home-content__subscribe">
-      <form id="mc-form" className="group" noValidate={true}>
+      <form
+        id="mc-form"
+        className="group"
+        noValidate={true}
+        onSubmit={onFormSubmit}
+      >
         <input
           type="email"
           value=""
