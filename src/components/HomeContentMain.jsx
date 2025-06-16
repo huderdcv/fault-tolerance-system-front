@@ -11,7 +11,7 @@ export const HomeContentMain = () => {
       <div className="col-eight home-content__text pull-right">
         <h3>Página de inicio</h3>
 
-        <AddUser />
+        {/* <AddUser /> */}
 
         <h1>Lista de usuarios</h1>
         {isLoading ? <h2>obteniendo usuarios...</h2> : <UserList data={data} />}
