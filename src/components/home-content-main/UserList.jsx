@@ -14,12 +14,12 @@ export const UserList = ({ data }) => {
           </tr>
         </thead>
         <tbody>
-          {data.map(({ id, text, completedAt }, i) => (
+          {data.map(({ id, nombre, email }, i) => (
             <tr key={id}>
               <td>{i + 1}</td>
               <td>{id}</td>
-              <td>{text}</td>
-              <td>{completedAt}</td>
+              <td>{nombre}</td>
+              <td>{email}</td>
             </tr>
           ))}
 
