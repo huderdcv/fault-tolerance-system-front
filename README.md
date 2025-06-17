@@ -1,6 +1,6 @@
 # Fault-Tolerance System
 
-Trabajo número 1 para el curso de Sistemas Distribuidos.
+Trabajo número 1 para el curso de Sistemas Distribuidos con Reactjs
 
 ## Pasos para el development
 
