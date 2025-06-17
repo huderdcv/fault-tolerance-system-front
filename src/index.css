@@ -5,3 +5,20 @@ th {
 .loading {
   color: gray;
 }
+
+.loading-circle {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 2px solid rgba(255, 255, 255, 0.2); /* borde más suave */
+  border-top: 2px solid #9b9b9b; /* parte superior más oscura */
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  margin-left: 6px; /* opcional: para separarlo del texto */
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -4,7 +4,7 @@ import { getEnvVariables } from '../helpers/getEnvVariables';
 
 const { VITE_SERVER1_URL, VITE_SERVER2_URL } = getEnvVariables();
 const servers = [VITE_SERVER1_URL, VITE_SERVER2_URL];
-const TIMEOUT = 4000;
+const TIMEOUT = 6000;
 
 export const useAxios = () => {
   const [state, setstate] = useState({

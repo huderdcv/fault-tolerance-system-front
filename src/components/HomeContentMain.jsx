@@ -9,21 +9,23 @@ export const HomeContentMain = () => {
   return (
     <div className="row home-content__main">
       <div className="col-eight home-content__text pull-right">
-        <h3>Página de inicio</h3>
+        <h3>Curso: Sistemas Distribuidos</h3>
 
         {/* <AddUser /> */}
 
-        <h1>Lista de usuarios</h1>
+        <h1>Lista de Estudiantes</h1>
         {isLoading ? (
           <h2>
-            <span className="loading">obteniendo usuarios...</span>
+            <span className="loading">
+              <span className="loading-circle"></span> obteniendo datos...
+            </span>
           </h2>
         ) : (
           <UserList data={data} />
         )}
       </div>
 
-      <ServerStatusCard serverUsing={serverUsing} />
+      <ServerStatusCard serverUsing={serverUsing} isLoading={isLoading} />
     </div>
   );
 };
