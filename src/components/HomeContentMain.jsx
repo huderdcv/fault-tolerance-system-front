@@ -5,7 +5,7 @@ import { ServerStatusCard } from './home-content-main/ServerStatusCard';
 import { useAxios } from '../hooks/useAxios';
 
 export const HomeContentMain = () => {
-  const { data, isLoading } = useAxios();
+  const { data, isLoading, serverUsing } = useAxios();
   return (
     <div className="row home-content__main">
       <div className="col-eight home-content__text pull-right">
@@ -14,10 +14,16 @@ export const HomeContentMain = () => {
         {/* <AddUser /> */}
 
         <h1>Lista de usuarios</h1>
-        {isLoading ? <h2>obteniendo usuarios...</h2> : <UserList data={data} />}
+        {isLoading ? (
+          <h2>
+            <span className="loading">obteniendo usuarios...</span>
+          </h2>
+        ) : (
+          <UserList data={data} />
+        )}
       </div>
 
-      <ServerStatusCard />
+      <ServerStatusCard serverUsing={serverUsing} />
     </div>
   );
 };

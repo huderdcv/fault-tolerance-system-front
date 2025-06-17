@@ -4,7 +4,7 @@ import { getEnvVariables } from '../helpers/getEnvVariables';
 
 const { VITE_SERVER1_URL, VITE_SERVER2_URL } = getEnvVariables();
 const servers = [VITE_SERVER1_URL, VITE_SERVER2_URL];
-const TIMEOUT = 2000;
+const TIMEOUT = 4000;
 
 export const useAxios = () => {
   const [state, setstate] = useState({
@@ -26,7 +26,7 @@ export const useAxios = () => {
         isLoading: true,
         hasError: false,
         error: null,
-        serverUsing: index,
+        serverUsing: index + 1,
       });
 
       try {
@@ -36,7 +36,6 @@ export const useAxios = () => {
         const response = await axios.get(`${server}/students`, {
           cancelToken: source.token,
         });
-
         clearTimeout(timeout);
 
         setstate({
@@ -44,8 +43,9 @@ export const useAxios = () => {
           isLoading: false,
           hasError: false,
           error: null,
-          serverUsing: index,
+          serverUsing: index + 1,
         });
+
         return;
       } catch (error) {
         setstate({
