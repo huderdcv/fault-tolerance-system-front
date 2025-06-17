@@ -14,11 +14,11 @@ export const useAxios = () => {
     getAxios();
   }, []);
 
-  const { VITE_SERVER1_URL } = getEnvVariables();
+  const { VITE_SERVER1_URL, VITE_SERVER2_URL } = getEnvVariables();
 
   const getAxios = async () => {
     try {
-      const { data } = await axios.get(`${VITE_SERVER1_URL}/todos`);
+      const { data } = await axios.get(`${VITE_SERVER2_URL}/students`);
       setstate({
         data,
         isLoading: false,
